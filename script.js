@@ -1,3 +1,5 @@
+// A special thanks to michalosman for their masterclass in clean code!
+
 // Data Structures
 
 class Book {
