@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d99e06913a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>Library</h1>
+        <a href="https://github.com/yadomkar" target="_blank">
+          <i class="fab fa-github"></i
+        ></a>
+      </div>
+    </header>
+    <main class="main container">
+      <button class="btn sort-btn" id="sortBtn">Order By</button>
+      <div class="books-grid" id="booksGrid"></div>
+    </main>
+    <div class="add-btn-div">
+      <button class="btn btn-add" id="addBookBtn">+ Add Book</button>
+    </div>
+    <div class="modal" id="addBookModal">
+      <form class="add-book-form" id="addBookForm">
+        <h3>Add new book</h3>
+        <input
+          class="input"
+          type="text"
+          id="title"
+          placeholder="Title"
+          required
+          maxlength="100"
+        />
+        <p class="error-msg" id="errorMsg"></p>
+        <input
+          class="input"
+          type="text"
+          id="author"
+          placeholder="Author"
+          required
+          maxlength="100"
+        />
+        <input
+          class="input"
+          type="number"
+          id="pages"
+          placeholder="Pages"
+          required
+          max="10000"
+        />
+        <div class="is-read">
+          <label for="isRead">Have you read this book?</label>
+          <input class="checkbox" type="checkbox" id="isRead" />
+        </div>
+        <button class="btn btn-teal" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="modal button-group" id="sortModal">
+      <button class="btn" id="titleSortBtn">Title</button>
+      <button class="btn" id="authorSortBtn">Author</button>
+      <button class="btn" id="pagesSortBtn">Pages</button>
+    </div>
+  </body>
+</html>
